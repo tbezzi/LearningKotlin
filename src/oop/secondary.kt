@@ -14,7 +14,11 @@ class Person(val first: String, val last: String) {
         first: String, last: String, fte: Boolean, loc: String): this(first, last, fte) {
         location = loc
     }
-    override fun toString() = "$first $last $fulltime $location"
+    override fun toString() = "${fullName()  $fulltime $location"
+
+    internal fun fullName() = "$last, $first"
+    private fun yearsOfService(): Int =
+            throw RuntimeException("Not implemented yet")
 }
 
 fun main() {
